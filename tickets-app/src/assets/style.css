@@ -1,0 +1,249 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+:root {
+  --blue: rgb(0, 157, 255);
+}
+::selection {
+  background-color: transparent;
+}
+.main {
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgb(229, 233, 237);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  padding: 40px 150px;
+}
+.logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--blue);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  transform: rotate(-30deg);
+}
+.content {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.filter {
+  width: 28%;
+  height: 440px;
+  background-color: white;
+  border-radius: 5px;
+  padding: 20px 0px;
+  box-shadow: 0px 0px 6px 0px rgb(200, 200, 200);
+}
+.filter h2 {
+  margin-left: 20px;
+  margin-bottom: 10px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.tickets {
+  width: 68%;
+  height: auto;
+}
+.item {
+  width: 100%;
+  height: 220px;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  margin-bottom: 30px;
+  box-shadow: 0px 0px 6px 0px rgb(200, 200, 200);
+  transition: .3s;
+}
+.item:hover {
+  box-shadow: 0px 0px 8px 2px rgb(190, 190, 190);
+  transform: scale(1.005);
+}
+.label-group {
+  width: 88%;
+  height: 50px;
+  display: flex;
+  margin: 0px 20px 30px;
+}
+.label-group label {
+  width: 33.99%;
+  border: 1px solid rgba(128, 128, 128, 0.3);
+  background-color: white;
+  color: var(--blue);
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.label-group label:hover {
+  border: 1px solid var(--blue);
+  background-color: rgba(0, 157, 255, 0.047);
+}
+.rub-label {
+  border-radius: 5px 0px 0px 5px;
+}
+.eur-label {
+  border-radius: 0px 5px 5px 0px;
+}
+.label-group input {
+  display: none;
+}
+input[type="radio"]:checked + label {
+  background-color: var(--blue);
+  color: white;
+}
+.check-group {
+  display: flex;
+  flex-direction: column;
+}
+.check-group input {
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+.check-group label {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0px 50px;
+  cursor: pointer;
+}
+.check-group label:hover {
+  background-color: rgba(0, 157, 255, 0.047);
+}
+.mark {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  height: 20px;
+  width: 20px;
+  margin-right: 20px;
+  background-color: white;
+  border-radius: 3px;
+  border: 1px solid rgba(128, 128, 128, 0.532);
+  cursor: pointer;
+}
+.mark:after {
+  left: 6px;
+  top: 2px;
+  width: 4px;
+  height: 8px;
+  border: solid var(--blue);
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.check-group input:checked ~ .mark {
+  border: 1px solid var(--blue);
+}
+.mark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.check-group input:checked ~ .mark:after {
+  display: block;
+}
+.airlines {
+    width: 32%;
+    height: 100%;
+    border-right: 1px solid rgba(211, 211, 211, 0.4);
+    padding: 25px 20px;
+}
+.buy-btn{
+    width: 100%;
+    height: 45%;
+    background-color: rgb(255, 100, 0);
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    font-size: 18px;
+    letter-spacing: .5px;
+    line-height: 1.5;
+    cursor: pointer;
+    transition: .3s;
+}
+.price {
+    margin-left: 8px;
+}
+.buy-btn:hover {
+    background-color: rgba(255, 102, 0, 0.9);
+}
+.fa-ruble-sign {
+    font-size: 15px;
+    margin-bottom: -27px;
+    transform: translate(5px);
+}
+.company {
+    width: 100%;
+    height: 55%;
+    overflow: hidden;
+    text-align: center;
+}
+.company img {
+    width: 82%;
+    margin-top: -35px;
+}
+.all-info {
+    width: 68%;
+    padding: 35px;
+}
+.flight-time {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.flight-time p {
+    width: 114px;
+    font-size: 38px;
+    color: #444;
+}
+.transfer {
+    width: 200px;
+    height: 35px;
+    border-bottom: 1px solid rgb(191, 191, 191);
+    transform: translateX(-10px);
+    text-align: center;
+    padding-top: 8px;
+    color: rgb(191, 191, 191);
+    text-transform: uppercase;
+    font-size: 15px;
+}
+.transfer i {
+    color: rgb(191, 191, 191);
+    position: absolute;
+    bottom: -9px;
+    right: -20px;
+}
+.flight-adress {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    color: #444;
+}
+.flight-adress p {
+    margin-bottom: 5px;
+}
+.flight-adress span {
+    color: rgb(191, 191, 191);
+}
