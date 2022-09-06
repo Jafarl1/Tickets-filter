@@ -1,4 +1,4 @@
 https://tickets-filter-sooty.vercel.app/
 
-Тестовое задание на фильтры. При клике на валюты цены билетов конвертируются в соответствующую валюту.
-Фильтры показывают билеты по количеству пересадок рейса. Если выбран фильтр все, остальные фильтры бессмысленны.
+A task for filters. When you click on currencies, ticket prices are converted to the corresponding currency.
+Filters show tickets by the number of flight transfers. If the 'all' filter is selected, the other filters are meaningless.
